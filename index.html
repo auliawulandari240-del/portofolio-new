@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- =====================================================================
+       EDIT: DATA UTAMA & SEO (Ubah bagian ini sesuai kebutuhan Anda)
+       ===================================================================== -->
+  <title>Aulia Wulandari — Portofolio Layanan Perbankan Syariah</title>
+  <meta name="description" content="Portofolio pribadi Aulia Wulandari, Pelajar dengan keahlian Layanan Perbankan Syariah, administrasi kas, dan pengarsipan dokumen di Mojokerto, Indonesia.">
+  <meta name="theme-color" content="#0F4C81" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0B132B" media="(prefers-color-scheme: dark)">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aulia Wulandari — Portofolio Layanan Perbankan Syariah">
+  <meta property="og:description" content="Pelajar keahlian Layanan Perbankan Syariah dengan pengalaman PKL di Koperasi Artha Nira Pabrik Gula Gempolkrep.">
+  <!-- EDIT: ganti dengan URL asli setelah deploy ke Vercel -->
+  <meta property="og:url" content="https://aulia-wulandari.vercel.app">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Aulia Wulandari — Portofolio Layanan Perbankan Syariah">
+  <meta name="twitter:description" content="Pelajar keahlian Layanan Perbankan Syariah dengan pengalaman PKL di Koperasi Artha Nira Pabrik Gula Gempolkrep.">
+
+  <!-- Favicon SVG Inline (Huruf AW dengan nuansa biru & emas) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F4C81'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='28' fill='%23F59E0B'%3EAW%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Plus Jakarta Sans (dengan font stack sistem sebagai cadangan) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =====================================================================
+       VARIABEL WARNA & TEMA (Terang & Gelap Otomatis + Manual)
+       ===================================================================== */
+    :root {
+      --bg-primary: #F8FAFC;
+      --bg-secondary: #FFFFFF;
+      --bg-tertiary: #EFF6FF;
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --accent-primary: #0F4C81; /* Biru Kobalt / Klasik Profesional */
+      --accent-primary-hover: #0A365C;
+      --accent-secondary: #D97706; /* Aksen Kuning Emas (kontras AA) */
+      --accent-secondary-bg: #FEF3C7;
+      --border-color: #CBD5E1;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+      --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+      --focus-ring: #D97706;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg-primary: #0B1120;
+        --bg-secondary: #1E293B;
+        --bg-tertiary: #172554;
+        --text-primary: #F8FAFC;
+        --text-secondary: #CBD5E1;
+        --accent-primary: #38BDF8;
+        --accent-primary-hover: #7DD3FC;
+        --accent-secondary: #FBBF24;
+        --accent-secondary-bg: rgba(251, 191, 36, 0.15);
+        --border-color: #334155;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+        --focus-ring: #FBBF24;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg-primary: #0B1120;
+      --bg-secondary: #1E293B;
+      --bg-tertiary: #172554;
+      --text-primary: #F8FAFC;
+      --text-secondary: #CBD5E1;
+      --accent-primary: #38BDF8;
+      --accent-primary-hover: #7DD3FC;
+      --accent-secondary: #FBBF24;
+      --accent-secondary-bg: rgba(251, 191, 36, 0.15);
+      --border-color: #334155;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+      --focus-ring: #FBBF24;
+    }
+
+    /* =====================================================================
+       RESET & DASAR AKSESIBILITAS
+       ===================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Tautan "Lewati ke konten" untuk aksesibilitas keyboard */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--accent-primary);
+      color: #FFFFFF;
+      padding: 0.75rem 1.25rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      z-index: 1000;
+      text-decoration: none;
+    }
+
+    :root[data-theme="dark"] .skip-link {
+      color: #0B1120;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* Indikator fokus yang jelas (WCAG AA) */
+    :focus-visible {
+      outline: 3px solid var(--focus-ring);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* =====================================================================
+       NAVIGASI ATAS (STICKY)
+       ===================================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 4rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding: 0.5rem 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 1.125rem;
+      color: var(--accent-primary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-primary);
+      font-weight: 500;
+      font-size: 0.9375rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    /* Tombol Ganti Tema & Download CV */
+    .btn-icon, .btn-outline-sm {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+      padding: 0.45rem 0.75rem;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-icon:hover, .btn-outline-sm:hover {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+    }
+
+    /* =====================================================================
+       1. HERO SECTION
+       ===================================================================== */
+    .hero {
+      padding: 4.5rem 0 3.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .badge-location {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+      background-color: var(--accent-secondary-bg);
+      color: var(--accent-secondary);
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .hero-role {
+      font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+      font-weight: 600;
+      color: var(--accent-primary);
+      margin-bottom: 1rem;
+    }
+
+    .hero-summary {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      max-width: 65ch;
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.875rem;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--accent-primary);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+    }
+
+    :root[data-theme="dark"] .btn-primary {
+      color: #0B1120;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .btn-primary {
+        color: #0B1120;
+      }
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--bg-secondary);
+      color: var(--text-primary);
+      border: 1.5px solid var(--border-color);
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.7rem 1.35rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+    }
+
+    /* =====================================================================
+       UMUM SECTION & HEADING
+       ===================================================================== */
+    section {
+      padding: 3.5rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title {
+      font-size: 1.625rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+      font-size: 0.975rem;
+    }
+
+    /* =====================================================================
+       2. PENGALAMAN (FILTER KEAHLIAN + ACCORDION)
+       ===================================================================== */
+    .filter-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-btn {
+      background-color: var(--bg-secondary);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      padding: 0.4rem 1rem;
+      font-family: inherit;
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+    }
+
+    .filter-btn[aria-pressed="true"] {
+      background-color: var(--accent-primary);
+      color: #FFFFFF;
+      border-color: var(--accent-primary);
+    }
+
+    :root[data-theme="dark"] .filter-btn[aria-pressed="true"] {
+      color: #0B1120;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .filter-btn[aria-pressed="true"] {
+        color: #0B1120;
+      }
+    }
+
+    .exp-card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .exp-header-btn {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+      color: var(--text-primary);
+      font-family: inherit;
+    }
+
+    .exp-header-btn:hover {
+      background-color: var(--bg-tertiary);
+    }
+
+    .exp-role {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      margin-bottom: 0.2rem;
+    }
+
+    .exp-org {
+      font-weight: 600;
+      font-size: 0.975rem;
+      color: var(--text-primary);
+    }
+
+    .exp-period {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 0.2rem;
+    }
+
+    .accordion-icon {
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+      color: var(--accent-primary);
+    }
+
+    .exp-header-btn[aria-expanded="true"] .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .exp-panel {
+      padding: 0 1.5rem 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    /* Tetap tampil jika JS dimatikan */
+    .exp-panel[hidden] {
+      display: none;
+    }
+
+    .task-list {
+      list-style: none;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 1rem;
+      background-color: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 0.5rem;
+    }
+
+    .task-item.is-filtered-out {
+      display: none;
+    }
+
+    .task-text {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-weight: 500;
+    }
+
+    .task-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.375rem;
+      background-color: var(--accent-secondary-bg);
+      color: var(--accent-secondary);
+      white-space: nowrap;
+    }
+
+    /* =====================================================================
+       3. PROYEK / STUDI KASUS PRAKTIK
+       ===================================================================== */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+    }
+
+    .card p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      list-style: none;
+    }
+
+    .pill {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background-color: var(--bg-tertiary);
+      color: var(--accent-primary);
+      border: 1px solid var(--border-color);
+    }
+
+    /* =====================================================================
+       4. KEAHLIAN DAN ALAT
+       ===================================================================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skill-box {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      padding: 1.35rem;
+    }
+
+    .skill-box h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* =====================================================================
+       5. SERTIFIKASI DAN PENDIDIKAN
+       ===================================================================== */
+    .edu-item {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid var(--accent-primary);
+      border-radius: 0.625rem;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .edu-item h3 {
+      font-size: 1.075rem;
+      font-weight: 700;
+    }
+
+    .edu-meta {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-top: 0.25rem;
+    }
+
+    /* =====================================================================
+       6. KONTAK
+       ===================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      padding: 1.125rem 1.25rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: border-color 0.2s, transform 0.15s;
+    }
+
+    .contact-card:hover {
+      border-color: var(--accent-primary);
+      transform: translateY(-2px);
+    }
+
+    .contact-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.5rem;
+      background-color: var(--bg-tertiary);
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-label {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      display: block;
+    }
+
+    .contact-value {
+      font-weight: 600;
+      font-size: 0.95rem;
+      word-break: break-all;
+    }
+
+    /* =====================================================================
+       FOOTER
+       ===================================================================== */
+    footer {
+      background-color: var(--bg-secondary);
+      border-top: 1px solid var(--border-color);
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+    }
+
+    /* =====================================================================
+       ANIMASI SCROLL (Menghormati prefers-reduced-motion)
+       ===================================================================== */
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* =====================================================================
+       CSS PRINT SEDERHANA (AGAR BISA DICETAK / DISIMPAN SEBAGAI PDF CV)
+       ===================================================================== */
+    @media print {
+      @page {
+        margin: 1.5cm;
+        size: A4;
+      }
+
+      body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        font-size: 11pt;
+        line-height: 1.45;
+      }
+
+      header, .skip-link, .hero-cta-group, .filter-group, .accordion-icon, footer, .no-print {
+        display: none !important;
+      }
+
+      .container {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .hero {
+        padding: 0 0 1rem;
+        border-bottom: 2px solid #0F4C81;
+      }
+
+      section {
+        padding: 1rem 0;
+        border-bottom: 1px solid #CBD5E1;
+        break-inside: avoid;
+      }
+
+      .exp-card, .card, .skill-box, .edu-item, .contact-card {
+        border: 1px solid #CBD5E1 !important;
+        box-shadow: none !important;
+        background: #FFFFFF !important;
+      }
+
+      /* Pastikan isi accordion terbuka penuh saat cetak CV */
+      .exp-panel, .exp-panel[hidden] {
+        display: block !important;
+        padding-top: 0.5rem;
+      }
+
+      .task-item.is-filtered-out {
+        display: flex !important;
+      }
+
+      .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+
+      a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 9pt;
+        color: #475569;
+      }
+
+      a[href^="mailto:"]::after,
+      a[href^="#"]::after {
+        content: "";
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#konten-utama" class="skip-link">Lewati ke konten utama</a>
+
+  <!-- =====================================================================
+       NAVIGASI ATAS (STICKY)
+       ===================================================================== -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="brand" aria-label="Beranda Aulia Wulandari">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="5" width="20" height="14" rx="2"/>
+          <line x1="2" y1="10" x2="22" y2="10"/>
+        </svg>
+        <span>Aulia Wulandari</span>
+      </a>
+
+      <nav aria-label="Navigasi Utama">
+        <ul class="nav-links">
+          <li><a href="#pengalaman">Pengalaman</a></li>
+          <li><a href="#proyek">Proyek</a></li>
+          <li><a href="#keahlian">Keahlian</a></li>
+          <li><a href="#pendidikan">Pendidikan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="theme-toggle" class="btn-icon" aria-label="Ganti tema tampilan" title="Ganti tema terang/gelap">
+          <span id="theme-icon" aria-hidden="true">🌓</span>
+          <span id="theme-label">Tema</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="konten-utama">
+    <!-- =====================================================================
+         1. HERO SECTION
+         EDIT: Ubah nama, profesi, dan ringkasan diri di bawah ini
+         ===================================================================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="badge-location">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Mojokerto, Indonesia</span>
+        </div>
+
+        <h1>Aulia Wulandari</h1>
+        <p class="hero-role">Pelajar — Keahlian Layanan Perbankan Syariah</p>
+        <p class="hero-summary">
+          Pelajar dengan fokus keahlian Layanan Perbankan Syariah yang teliti dalam pengelolaan kas bank, pengarsipan dokumen fisik maupun digital, pembuatan invoice pada Microsoft Excel, serta pelayanan prima kepada nasabah.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#kontak" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>Hubungi Saya</span>
+          </a>
+
+          <!-- Fitur Download CV (Mengunduh file CV HTML/Teks atau Cetak PDF) -->
+          <button type="button" id="download-cv-btn" class="btn-secondary" title="Unduh CV atau Simpan sebagai PDF">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Download CV (PDF)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         2. PENGALAMAN (DENGAN FILTER KEAHLIAN & ACCORDION)
+         EDIT: Tambahkan atau ubah rincian pengalaman di bagian ini
+         ===================================================================== -->
+    <section id="pengalaman" class="reveal">
+      <div class="container">
+        <h2 class="section-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+          <span>Pengalaman</span>
+        </h2>
+        <p class="section-subtitle">Pilih kategori keahlian untuk menyaring rincian tugas selama Praktek Kerja Lapangan.</p>
+
+        <!-- Filter Pengalaman Berdasarkan Keahlian -->
+        <div class="filter-group" role="group" aria-label="Filter pengalaman berdasarkan keahlian">
+          <button type="button" class="filter-btn" data-filter="semua" aria-pressed="true">Semua Tugas (5)</button>
+          <button type="button" class="filter-btn" data-filter="keuangan" aria-pressed="false">Administrasi Kas &amp; Keuangan</button>
+          <button type="button" class="filter-btn" data-filter="arsip" aria-pressed="false">Pengarsipan Dokumen</button>
+          <button type="button" class="filter-btn" data-filter="layanan" aria-pressed="false">Layanan Pelanggan</button>
+        </div>
+
+        <!-- Accordion Pengalaman -->
+        <article class="exp-card">
+          <h3>
+            <button type="button" class="exp-header-btn" aria-expanded="true" aria-controls="panel-pkl-1" id="btn-pkl-1">
+              <div>
+                <div class="exp-role">Praktek Kerja Lapangan (PKL)</div>
+                <div class="exp-org">Koperasi Artha Nira Pabrik Gula Gempolkrep</div>
+                <!-- EDIT: ganti dengan periode bulan/tahun PKL asli -->
+                <div class="exp-period">Mojokerto, Indonesia <!-- EDIT: contoh: Januari 2026 – Juni 2026 --></div>
+              </div>
+              <svg class="accordion-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+          </h3>
+
+          <div id="panel-pkl-1" class="exp-panel" role="region" aria-labelledby="btn-pkl-1">
+            <ul class="task-list">
+              <li class="task-item" data-category="keuangan">
+                <span class="task-text">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Membuat kas bank</span>
+                </span>
+                <span class="task-tag">Keuangan</span>
+              </li>
+              <li class="task-item" data-category="arsip">
+                <span class="task-text">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Pengarsipan bukti kas bank</span>
+                </span>
+                <span class="task-tag">Pengarsipan</span>
+              </li>
+              <li class="task-item" data-category="arsip">
+                <span class="task-text">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Melakukan proses pengarsipan dokumen digital</span>
+                </span>
+                <span class="task-tag">Pengarsipan</span>
+              </li>
+              <li class="task-item" data-category="layanan">
+                <span class="task-text">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Melayani customer koperasi</span>
+                </span>
+                <span class="task-tag">Layanan</span>
+              </li>
+              <li class="task-item" data-category="keuangan">
+                <span class="task-text">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Pembuatan invoice pada aplikasi Excel</span>
+                </span>
+                <span class="task-tag">Keuangan &amp; Excel</span>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. PROYEK / PRAKTIK KERJA
+         EDIT: Ganti atau tambahkan proyek praktik sekolah/PKL Anda di bawah ini
+         ===================================================================== -->
+    <section id="proyek" class="reveal">
+      <div class="container">
+        <h2 class="section-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+          </svg>
+          <span>Proyek &amp; Praktik Administrasi</span>
+        </h2>
+        <p class="section-subtitle">Implementasi langsung kompetensi administrasi keuangan dan kearsipan selama masa PKL.</p>
+
+        <div class="grid-cards">
+          <article class="card">
+            <div>
+              <h3>Penyusunan Laporan Kas Bank &amp; Invoice Excel</h3>
+              <p>Pencatatan transaksi kas bank harian serta pembuatan format tagihan (invoice) terstruktur menggunakan aplikasi Microsoft Excel di Koperasi Artha Nira.</p>
+            </div>
+            <ul class="pill-list">
+              <li class="pill">Microsoft Excel</li>
+              <li class="pill">Kas Bank</li>
+              <li class="pill">Invoice</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div>
+              <h3>Sistem Pengarsipan Fisik &amp; Digital Bukti Kas</h3>
+              <p>Penataan bukti transaksi kas bank secara kronologis dan alih media (digitalisasi) dokumen koperasi agar mudah ditelusuri kembali saat dibutuhkan.</p>
+            </div>
+            <ul class="pill-list">
+              <li class="pill">Arsip Fisik</li>
+              <li class="pill">Arsip Digital</li>
+              <li class="pill">Administrasi</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. KEAHLIAN DAN ALAT
+         ===================================================================== -->
+    <section id="keahlian" class="reveal">
+      <div class="container">
+        <h2 class="section-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          <span>Keahlian dan Alat</span>
+        </h2>
+        <p class="section-subtitle">Kompetensi inti di bidang layanan perbankan syariah serta perangkat kerja yang dikuasai.</p>
+
+        <div class="skills-grid">
+          <div class="skill-box">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span>Perbankan &amp; Keuangan</span>
+            </h3>
+            <ul class="pill-list">
+              <li class="pill">Layanan Perbankan Syariah</li>
+              <li class="pill">Pembuatan Kas Bank</li>
+              <li class="pill">Pembuatan Invoice</li>
+              <li class="pill">Pelayanan Customer Koperasi</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span>Kearsipan &amp; Perangkat Lunak</span>
+            </h3>
+            <ul class="pill-list">
+              <li class="pill">Microsoft Excel</li>
+              <li class="pill">Pengarsipan Bukti Kas Bank</li>
+              <li class="pill">Pengarsipan Dokumen Digital</li>
+              <li class="pill">Administrasi Perkantoran</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. SERTIFIKASI DAN PENDIDIKAN
+         EDIT: Ganti nama sekolah, tahun masuk/lulus, dan sertifikat asli Anda
+         ===================================================================== -->
+    <section id="pendidikan" class="reveal">
+      <div class="container">
+        <h2 class="section-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+          <span>Sertifikasi dan Pendidikan</span>
+        </h2>
+        <p class="section-subtitle">Riwayat pendidikan formal dan pencapaian kompetensi keahlian.</p>
+
+        <div class="edu-item">
+          <h3>Kompetensi Keahlian Layanan Perbankan Syariah</h3>
+          <!-- EDIT: ganti dengan nama SMK/Sekolah dan tahun pendidikan asli -->
+          <p class="edu-meta">Pelajar — Mojokerto, Indonesia <!-- EDIT: ganti dengan nama sekolah & tahun, misal: SMKN 1 Mojokerto (2024 – 2027) --></p>
+        </div>
+
+        <div class="edu-item">
+          <h3>Sertifikat Praktek Kerja Lapangan (PKL)</h3>
+          <p class="edu-meta">Koperasi Artha Nira Pabrik Gula Gempolkrep — Mojokerto, Indonesia <!-- EDIT: ganti dengan nomor/tahun sertifikat PKL jika ada --></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. KONTAK
+         EDIT: Ganti tautan LinkedIn / GitHub / portofolio lainnya dengan URL asli
+         ===================================================================== -->
+    <section id="kontak" class="reveal">
+      <div class="container">
+        <h2 class="section-title">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          <span>Kontak</span>
+        </h2>
+        <p class="section-subtitle">Silakan hubungi saya melalui email atau tautan profil di bawah ini untuk diskusi peluang kerja maupun magang.</p>
+
+        <div class="contact-grid">
+          <a href="mailto:auliawulandari240@gmail.com" class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">auliawulandari240@gmail.com</span>
+            </div>
+          </a>
+
+          <div class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <span class="contact-label">Domisili</span>
+              <span class="contact-value">Mojokerto, Indonesia</span>
+            </div>
+          </div>
+
+          <!-- EDIT: ganti href="#" dengan URL LinkedIn asli Anda -->
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+            </div>
+            <div>
+              <span class="contact-label">LinkedIn <!-- EDIT: ganti dengan data asli --></span>
+              <span class="contact-value">Profil LinkedIn Aulia</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       FOOTER SEDERHANA
+       ===================================================================== -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Aulia Wulandari. Mojokerto, Indonesia.</p>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       JAVASCRIPT INTERAKTIF (Tanpa dependensi luar, aman jika JS mati)
+       ===================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      // 1. Tahun otomatis di footer
+      var yearEl = document.getElementById('year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+
+      // 2. Pengaturan Tema Terang / Gelap dengan localStorage (aman dengan try/catch)
+      var root = document.documentElement;
+      var themeToggle = document.getElementById('theme-toggle');
+      var themeIcon = document.getElementById('theme-icon');
+      var themeLabel = document.getElementById('theme-label');
+
+      function getSavedTheme() {
+        try {
+          return localStorage.getItem('portfolio_theme');
+        } catch (e) {
+          return null;
+        }
+      }
+
+      function saveTheme(theme) {
+        try {
+          localStorage.setItem('portfolio_theme', theme);
+        } catch (e) {
+          // Abaikan jika penyimpanan diblokir browser
+        }
+      }
+
+      function applyTheme(theme) {
+        if (theme === 'dark' || theme === 'light') {
+          root.setAttribute('data-theme', theme);
+        } else {
+          root.removeAttribute('data-theme');
+        }
+        updateThemeButton(theme);
+      }
+
+      function updateThemeButton(theme) {
+        if (!themeIcon || !themeLabel) return;
+        var isDark = theme === 'dark' ||
+          (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+        themeIcon.textContent = isDark ? '☀️' : '🌙';
+        themeLabel.textContent = isDark ? 'Terang' : 'Gelap';
+      }
+
+      var currentTheme = getSavedTheme();
+      applyTheme(currentTheme);
+
+      if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+          var isCurrentlyDark = root.getAttribute('data-theme') === 'dark' ||
+            (!root.getAttribute('data-theme') && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          var nextTheme = isCurrentlyDark ? 'light' : 'dark';
+          applyTheme(nextTheme);
+          saveTheme(nextTheme);
+        });
+      }
+
+      // 3. Accordion Pengalaman (aria-expanded & aria-controls)
+      var accordionButtons = document.querySelectorAll('.exp-header-btn');
+      accordionButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var expanded = btn.getAttribute('aria-expanded') === 'true';
+          var panelId = btn.getAttribute('aria-controls');
+          var panel = document.getElementById(panelId);
+
+          btn.setAttribute('aria-expanded', String(!expanded));
+          if (panel) {
+            if (expanded) {
+              panel.setAttribute('hidden', '');
+            } else {
+              panel.removeAttribute('hidden');
+            }
+          }
+        });
+      });
+
+      // 4. Filter Pengalaman Berdasarkan Keahlian (aria-pressed)
+      var filterButtons = document.querySelectorAll('.filter-btn');
+      var taskItems = document.querySelectorAll('.task-item');
+
+      filterButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var selectedFilter = btn.getAttribute('data-filter');
+
+          filterButtons.forEach(function (b) {
+            b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+          });
+
+          // Pastikan accordion terbuka saat filter diklik
+          accordionButtons.forEach(function (accBtn) {
+            accBtn.setAttribute('aria-expanded', 'true');
+            var p = document.getElementById(accBtn.getAttribute('aria-controls'));
+            if (p) p.removeAttribute('hidden');
+          });
+
+          taskItems.forEach(function (item) {
+            var category = item.getAttribute('data-category');
+            if (selectedFilter === 'semua' || category === selectedFilter) {
+              item.classList.remove('is-filtered-out');
+            } else {
+              item.classList.add('is-filtered-out');
+            }
+          });
+        });
+      });
+
+      // 5. Tombol Download CV (Membuka dialog cetak / Simpan sebagai PDF dengan layout CV)
+      var downloadCvBtn = document.getElementById('download-cv-btn');
+      if (downloadCvBtn) {
+        downloadCvBtn.addEventListener('click', function () {
+          // Pastikan semua accordion terbuka sebelum mencetak CV
+          accordionButtons.forEach(function (accBtn) {
+            accBtn.setAttribute('aria-expanded', 'true');
+            var p = document.getElementById(accBtn.getAttribute('aria-controls'));
+            if (p) p.removeAttribute('hidden');
+          });
+          window.print();
+        });
+      }
+
+      // 6. Animasi Muncul Saat Scroll (menghormati prefers-reduced-motion)
+      var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var revealElements = document.querySelectorAll('.reveal');
+
+      if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+
+        revealElements.forEach(function (el) {
+          observer.observe(el);
+        });
+      } else {
+        revealElements.forEach(function (el) {
+          el.classList.add('is-visible');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
